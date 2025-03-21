@@ -15,6 +15,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/system";
 import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 // Styled components
 const NavContainer = styled(AppBar)({
@@ -52,6 +54,7 @@ const MobileMenu = styled(Box)(({ theme }) => ({
 export default function Navbar() {
   const { isLoggedIn, handleLogout } = useAuth();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  // const navigate = useNavigate()
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -108,8 +111,8 @@ export default function Navbar() {
             </Button>
           ) : (
             <>
-              <Button color="inherit">Login</Button>
-              <Button color="inherit" variant="outlined">
+              <Button color="inherit" component={Link} to="/login">Login</Button>
+              <Button color="inherit" component={Link} to="/signup">
                 Signup
               </Button>
             </>
@@ -155,12 +158,12 @@ export default function Navbar() {
                 </ListItem>
               ) : (
                 <>
-                  <ListItem component="button" onClick={() => console.log("Login clicked")}>
-                    <ListItemText primary="Login" />
-                  </ListItem>
-                  <ListItem component="button" onClick={() => console.log("Signup clicked")}>
-                    <ListItemText primary="Signup" />
-                  </ListItem>
+                  <ListItem component={Link} to="/login">
+                  <ListItemText primary="Login" />
+                </ListItem>
+                <ListItem component={Link} to="/signup">
+                  <ListItemText primary="Signup" />
+                </ListItem>
                 </>
               )}
             </List>

@@ -35,7 +35,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" sx={{backgroundColor:"white", p:5}}>
       <Box sx={{ marginTop: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Typography variant="h4" component="h1" gutterBottom>
           Login

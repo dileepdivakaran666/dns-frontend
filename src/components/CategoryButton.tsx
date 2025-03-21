@@ -12,9 +12,7 @@ function CategoryButtons({ categories, selectedCategory, onCategoryChange }: Cat
       sx={{
         display: "flex",
         gap: 2,
-        marginLeft: "calc(-50vw + 48%)",
-        width: "100vw",
-        justifyContent: "center",
+        justifyContent:"space-evenly",
         mb: 3,
         backgroundColor:"black",
         overflowX: "auto", // Enable horizontal scrolling
