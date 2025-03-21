@@ -71,13 +71,13 @@ export default function Navbar() {
 
   const navItems = [
     { text: "HOME", link: "/" },
-    { text: "MENU", link: "/menu" },
+    { text: "MENU", link: "/" },
     { text: "MAKE A RESERVATION", link: "/reservation" },
     { text: "CONTACT US", link: "/contact" },
   ];
 
   return (
-    <NavContainer position="static">
+    <NavContainer position="fixed">
       <Toolbar sx={{ display: "flex", alignItems: "center", height: 60 }}>
         {/* Logo */}
         <Box
@@ -102,7 +102,7 @@ export default function Navbar() {
         {/* Desktop Nav Items */}
         <NavItems>
           {navItems.map((item) => (
-            <Box key={item.text}>{item.text}</Box>
+            <Box key={item.text} component={Link} to={item.link}>{item.text}</Box>
           ))}
           {/* Conditionally render Login/Signup or Logout based on isLoggedIn */}
           {isLoggedIn ? (

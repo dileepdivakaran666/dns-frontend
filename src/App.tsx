@@ -12,6 +12,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import AddMenu from './components/AddMenu';
 import ViewMenuItems from './components/ViewMenuItems';
 import AddMenuItemWrapper from './components/AddMenuItemWrapper';
+import ContactUs from './components/ContactUs';
+import Reservation from './components/Reservation';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/" element={<HomePage/>} />
           <Route path='/login' element={<Login/>}/>
           <Route path='/signup' element={<Signup/>}/>
+          <Route path='/contact' element={<ContactUs/>}/>
+          <Route path='/reservation' element={<Reservation/>}/>
           <Route path="/*" element={<NotFound/>} />
           
           {/* Protected Admin Routes */}
