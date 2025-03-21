@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000'; // Replace with your actual API base URL
+const API_BASE_URL = 'https://dns-backend-m8hq.onrender.com'; // Replace with your actual API base URL
 
 interface LoginResponse {
     token: string;
