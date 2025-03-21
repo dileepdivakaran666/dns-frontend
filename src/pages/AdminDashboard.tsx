@@ -23,22 +23,23 @@ const AdminDashboard = () => {
   const deleteMenu = async(id:string)=>{
     try{
         await deleteMenuService(id)
+        navigate('/admin')
     }catch(error:any){
         alert(error.message)
     }
   }
 
   return (
-    <Box sx={{ maxWidth: 900, mx: "auto", mt: 5 }}>
+    <Box sx={{ maxWidth: 900, mx: "auto", mt: 10, pt:5 }}>
       <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ mb: 3 }}>
-        <Typography variant="h4" sx={{ fontWeight: "bold" }}>Admin Dashboard</Typography>
+        <Typography variant="h4" sx={{ fontWeight: "bold", color:"white" }}>Admin Dashboard</Typography>
         <Button variant="contained" color="primary" onClick={() => navigate("/admin/add-menu")}>Add Menu</Button>
       </Stack>
 
       <Typography variant="h5" sx={{ mb: 3 }}>Menu Categories</Typography>
 
       <Grid container spacing={2}>
-        {categories.map((cat) => (
+        {categories?.map((cat) => (
           <Grid item xs={12} key={cat._id}>
             <Card sx={{ p: 2, boxShadow: 2 }}>
               <CardContent>

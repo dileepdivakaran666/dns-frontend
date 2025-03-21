@@ -57,10 +57,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const handleLogout = async () => {
     try {
       const res = await logoutUser();
-      alert(res.data.message);
+      alert(res.message);
       setIsLoggedIn(false);
       setUserProp({ id: null, role: null, username: null });
     } catch (err: any) {
+      console.log(err)
       alert(err.message);
     }
   };

@@ -26,7 +26,7 @@ const AddMenu = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, mx: "auto", mt: 5, p: 3, boxShadow: 3, borderRadius: 2, backgroundColor:"white" }}>
+    <Box sx={{ maxWidth: 400, mx: "auto", mt: 10, p: 3, boxShadow: 3, borderRadius: 2, backgroundColor:"white" }}>
       <Typography variant="h5" sx={{ mb: 3 }}>Add New Menu</Typography>
       <TextField fullWidth label="Menu Name" name="name" value={menu.name} onChange={handleChange} sx={{ mb: 2 }} />
       <TextField fullWidth label="Description" name="description" value={menu.description} onChange={handleChange} sx={{ mb: 2 }} />
