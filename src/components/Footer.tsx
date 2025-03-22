@@ -60,7 +60,7 @@ const Footer = () => {
     <Box
         sx={{
             position: 'absolute', // Position the image absolutely
-            width: '100%',
+            width: '80%',
             height: 'auto',
             display: "flex", 
             justifyContent: "center",

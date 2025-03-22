@@ -14,7 +14,7 @@ const ContactUs = () => {
         justifyContent:'center',
       }}
     >
-      <Typography variant="h1">Contact Us Page</Typography>
+      <Typography variant="h4" sx={{width: '50%'}}>Contact Us Page</Typography>
 </Box>
     </>
   );

@@ -14,7 +14,7 @@ const Reservation = () => {
         justifyContent:'center',
       }}
     >
-      <Typography variant="h1">Reservation Page</Typography>
+      <Typography variant="h4">Reservation Page</Typography>
 </Box>
     </>
   );
