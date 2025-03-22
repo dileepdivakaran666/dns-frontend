@@ -9,7 +9,7 @@ const ContactUs = () => {
         color: "white",
         textAlign: "center",
         display:'flex',
-        mt:20,
+        mt:10,
         alignItems:'center',
         justifyContent:'center',
       }}

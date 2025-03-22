@@ -22,6 +22,7 @@ import { Link } from 'react-router-dom';
 const NavContainer = styled(AppBar)({
   backgroundColor: "black",
   padding: "10px 0",
+  boxSizing: "border-box",
 });
 
 const Logo = styled("img")({
@@ -77,7 +78,8 @@ export default function Navbar() {
   ];
 
   return (
-    <NavContainer position="fixed">
+    <Box sx={{ flexGrow: 1 }}>
+    <NavContainer position="static">
       <Toolbar sx={{ display: "flex", alignItems: "center", height: 60 }}>
         {/* Logo */}
         <Box
@@ -171,5 +173,8 @@ export default function Navbar() {
         </Drawer>
       </Toolbar>
     </NavContainer>
+    
+      
+    </Box>
   );
 }
