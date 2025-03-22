@@ -149,7 +149,7 @@ export default function Navbar() {
           >
             <List>
               {navItems.map((item) => (
-                <ListItem component="button" key={item.text} onClick={() => console.log(item.text)}>
+                <ListItem component={Link} to={item.link} key={item.text} onClick={() => console.log(item.text)}>
                   <ListItemText primary={item.text} />
                 </ListItem>
               ))}
