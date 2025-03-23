@@ -10,7 +10,7 @@ const Login: React.FC = () => {
   const [error, setError] = useState<string>('');
   const [success, setSuccess] = useState<string>('');
   const navigate = useNavigate();
-  const { handleLogin, userProp } = useAuth();
+  const { handleLogin } = useAuth();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,10 +24,15 @@ const Login: React.FC = () => {
       }
       await handleLogin();
 
-      if (userProp?.role === 'admin') {
-        navigate('/admin');
-      } else {
-        navigate('/');
+      // if (userProp?.role === 'admin') {
+      //   navigate('/admin');
+      // } else {
+      //   navigate('/');
+      // }
+      if(response.user.role === 'admin'){
+        navigate('/admin')
+      }else{
+        navigate('/')
       }
     } catch (error: any) {
       alert('Login failed! ' + (error.response?.data?.message || error.message));
